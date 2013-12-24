@@ -1,0 +1,59 @@
+<!-- all of these links/scriptswrk --> 
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>5th jQuery assignment</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery5.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+
+			$("#datepicker").datepicker();
+			$("#datepickers").datepicker();
+	
+			$("#box").hide();
+			$("#forms").submit(function(){
+			 ////////// needs to hide the box at the beginning 
+			var leave = $("#datepicker").val(); // sets the datepicker to the value leave 
+			var come_back = $("#datepickers").val(); // ""
+			$("#from").append(leave); // appends the leave variable to id=from 
+			$("#date").append(come_back); //appending the variables to the paragraph id- 
+			$("#box").fadeIn();
+
+			return false;   // are the variables above right? 
+		});
+	});
+			
+	</script> 
+
+</head>
+<body>
+	<h2>jQuery 2nd assignment > 2</h2>
+	<form id="forms">
+		<div id="box">
+	 		<h4>This is your form</h4>
+	 		<p id="from">From:</p>
+	 		<p id="date">Date:</p>
+ 		</div> 
+	
+		<div id="date">
+			<p id="leave-dates">Leave: <input type="text" id="datepicker"/></p>
+			<p id="return-dates">Return: <input type="text" id="datepickers"/></p>
+		</div>
+
+		<input type="submit" value='submit'> <!--submit button --> 
+	</form>
+
+</body>
+</html> 

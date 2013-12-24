@@ -1,0 +1,135 @@
+<!-- not sure why they are both on the same line now, both ninja-cat functions worked, then i commented one out. Made a div for "x"-->
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>6th jQuery assignment</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery6.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"> -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	
+	<script>
+
+	$(document).ready(function(){      //when the doc is ready, run the funtion 
+		$("#sortable").sortable();
+		// $("sortable").disableSelection();
+		$("#sort").hide();
+
+
+   //     $(".pics-2 img").click(function(){
+			// 	$(this).hide();
+			// 	   console.log("hide");
+			// 	   if($(this).attr("src") == "ninja-1.jpg"){
+			// 	   		$(this).attr("src", "cat-1.jpg");
+			// 	   }
+				
+			// 		console.log("replace");
+			// 		if($(this).attr("src") == "ninja-2.jpg"){
+			// 	   		$(this).attr("src", "cat-2.jpg");
+			// 	   }
+			// 	   console.log("replace");
+			// 		if($(this).attr("src") == "ninja-3.jpg"){
+			// 	   		$(this).attr("src", "cat-3.jpg");
+			// 	   }
+			// 	   console.log("replace");
+			// 		if($(this).attr("src") == "ninja-4.jpg"){
+			// 	   		$(this).attr("src", "cat-4.jpg");
+			// 	   }
+			// 	   console.log("replace4");
+			// 		if($(this).attr("src") == "ninja-5.jpg"){
+			// 	   		$(this).attr("src", "cat-5.jpg");
+			// 	   }
+
+			// });
+
+       $(".cat").hide();
+
+       $(".pics-2").click(function(){
+       		$(this).hide();
+       		$(this).next().show();
+       });
+
+       $(".cat").click(function(){
+       		$(this).hide();
+       		$(this).prev().show();
+
+       });
+
+	});
+	
+	
+
+	</script>
+
+</head> 
+<body>
+
+	<div id="ninja">
+		<h2 class="titles">Drag the Ninja pieces </h2>
+		<ul id="sortable">
+			<li class="pics"><img src="images/ninja-1.jpg" alt="picture of a ninja"></li>
+			<li class="pics"><img src="images/ninja-2.jpg" alt="picture of a ninja" ></li>
+			<li class="pics"><img src="images/ninja-3.jpg" alt="picture of a ninja" ></li>
+			<li class="pics"><img src="images/ninja-4.jpg" alt="picture of a ninja" ></li>
+			<li class="pics"><img src="images/ninja-5.jpg" alt="picture of a ninja" ></li>
+		</ul>
+	</div>
+
+	<!-- <div id="ninja-cat">
+		<ul id="sortable">
+			<li class="pics-2"><img src="ninja-1.jpg" alt="picture of a ninja"></li>
+			<li class="pics-2"><img src="ninja-2.jpg" alt="picture of a ninja"></li>
+			<li class="pics-2"><img src="ninja-3.jpg" alt="picture of a ninja"></li>
+			<li class="pics-2"><img src="ninja-4.jpg" alt="picture of a ninja"></li>
+			<li class="pics-2"><img src="ninja-5.jpg" alt="picture of a ninja"></li>
+		</ul>
+		<ul id="sort">
+			<li class="cat"><img src="cat-1.jpg" alt="picture of a cat"></li>
+			<li class="cat"><img src="cat-2.jpg" alt="picture of a cat"></li> 
+			<li class="cat"><img src="cat-3.jpg" alt="picture of a cat"></li> 
+			<li class="cat"><img src="cat-4.jpg" alt="picture of a cat"></li> 
+			<li class="cat"><img src="cat-5.jpg" alt="picture of a cat"></li> 
+		</ul>
+	</div> -->
+	<div id="x">
+		<h2 class="titles"> Click the pieces </h2>
+		<ul id="easy-way">
+			<li class="pics-2"><img src="images/ninja-1.jpg" alt="picture of a ninja"></li>
+			<li class="cat"><img src="images/cat-1.jpg" alt="picture of a cat"></li>
+			<li class="pics-2"><img src="images/ninja-2.jpg" alt="picture of a ninja"></li>
+			<li class="cat"><img src="images/cat-2.jpg" alt="picture of a cat"></li>
+			<li class="pics-2"><img src="images/ninja-3.jpg" alt="picture of a ninja"></li>
+			<li class="cat"><img src="images/cat-3.jpg" alt="picture of a cat"></li> 
+			<li class="pics-2"><img src="images/ninja-4.jpg" alt="picture of a ninja"></li>
+			<li class="cat"><img src="images/cat-4.jpg" alt="picture of a cat"></li> 
+			<li class="pics-2"><img src="images/ninja-5.jpg" alt="picture of a ninja"></li>
+			<li class="cat"><img src="images/cat-5.jpg" alt="picture of a cat"></li> 
+		</ul>
+	</div> 
+
+
+
+	<!-- <div class="row" id="rows"> --> <!--class is bootstrap--> 
+		<!-- <h2 id="h2">Select Arena</h2>
+  		<div class="col-md-4"><button type="button" class="btn btn-default" id="hover1"><a id='hover' href="">Beach</a></button></div>
+  		<div class="col-md-4"><button type="button" class="btn btn-default"><a href="">Planet</a></button></div>
+ 		<div class="col-md-4"><button type="button" class="btn btn-default"><a href="">Dojo</a></button></div>
+ 		<div class="col-md-4"><button type="button" class="btn btn-default"><a href="">Forest</a></button></div>
+ 		<div class="col-md-4"><button type="button" class="btn btn-default"><a href="">Matrix</a></button></div>
+ 		<div class="col-md-4"><button type="button" class="btn btn-default"><a href="">Snow</a></button>
+	</div> -->
+    
+</body>
+</html>
+
+<!-- image click -->  
+
+<!-- mn5xx --> 

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>4th jQuery assignment</title>
+	<meta name="description" content="jQuery">
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery4.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("img").click(function(){
+				$(this).hide();
+
+			});
+			$("button").click(function(){
+				$("img").show();
+				
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+	<div id='main-div'>
+		<h1>Click the pics</h1>
+		<div id="pics-div"> 
+			<img id="pic-1" src="images/reggiebush.jpg" alt="img of reggie bush">
+			<img id="pic-2" src="images/reggiebush.jpg" alt="img of reggie bush">
+			<img id="pic-3" src="images/reggiebush.jpg" alt="img of reggie bush">
+			<img id="pic-4" src="images/reggiebush.jpg" alt="img of reggie bush">
+			<img id="pic-5" src="images/reggiebush.jpg" alt="img of reggie bush">
+			<img id="pic-6" src="images/reggiebush.jpg" alt="img of reggie bush">
+			<img id="pic-7" src="images/reggiebush.jpg" alt="img of reggie bush">
+			<img id="pic-8" src="images/reggiebush.jpg" alt="img of reggie bush">
+		</div> <!--end of pics-div--> 
+	</div>
+	<button>Click To Restore</button> 
+</body>
+</html>
